@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Set build params
+version_name=$1
+push=$2
+dockerfile_path="ruby-$version_name.dockerfile"
+repository="jmrsnt/passenger-oracle"
+tag="$repository:$version_name"
+
+# Output build info
+echo "Version: $version_name"
+echo "Dockerfile: $dockerfile_path"
+
+# Build Image
+docker build -t $tag -f $dockerfile_path .
+
+# Push Image
+if [ "$push" = "push" ]; then
+  echo "Pushing $tag"
+  docker push $tag
+fi
