@@ -8,7 +8,7 @@ ENV LD_LIBRARY_PATH /usr/lib/oracle/12.2/client64/lib
 COPY ./lib/oracle-instantclient12.2-devel-12.2.0.1.0-1.x86_64.rpm /tmp/oracle-instantclient12.2-devel-12.2.0.1.0-1.x86_64.rpm
 COPY ./lib/oracle-instantclient12.2-basic-12.2.0.1.0-1.x86_64.rpm /tmp/oracle-instantclient12.2-basic-12.2.0.1.0-1.x86_64.rpm
 
-RUN bash -lc 'echo "export LD_LIBRARY_PATH=/usr/lib/oracle/12.2/client64/lib:$LD_LIBRARY_PATH' >> /etc/container_environment.sh'
+RUN bash -lc 'echo "export LD_LIBRARY_PATH=/usr/lib/oracle/12.2/client64/lib:$LD_LIBRARY_PATH" >> /etc/container_environment.sh'
 RUN bash -lc 'add-apt-repository universe'
 RUN bash -lc 'echo "deb http://cz.archive.ubuntu.com/ubuntu bionic main" >> /etc/apt/sources.list'
 RUN bash -lc 'echo "deb http://cz.archive.ubuntu.com/ubuntu bionic-security main" >> /etc/apt/sources.list'
