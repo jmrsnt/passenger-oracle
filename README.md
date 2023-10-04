@@ -1,11 +1,11 @@
-Passenger com Oracle Instantclient
+# Passenger with Oracle Instantclient
 
-Esta imagem Docker é baseada na imagem `phusion/passenger-full` e possui o cliente Oracle Instantclient v12.2 instalado.
+This Docker image is based on the `phusion/passenger-full` image and has the Oracle Instantclient v12.2 installed.
 
-## Como usar
+## How to use
 
-Para utilizar esta imagem, basta incluir o seguinte comando no seu Dockerfile:
+To use this image, simply include the following command in your Dockerfile:
 
 ```Dockerfile
-FROM jmrstn/passenger-oracle
+FROM jmrsnt/passenger-oracle
 ```
