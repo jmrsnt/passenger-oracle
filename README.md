@@ -9,3 +9,11 @@ To use this image, simply include the following command in your Dockerfile:
 ```Dockerfile
 FROM jmrsnt/passenger-oracle
 ```
+
+## Build
+
+To build this image, use the command
+
+```bash
+$ ./build
+```
